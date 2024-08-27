@@ -1,6 +1,9 @@
-import React from 'react'
+import useTitulo from "../hooks/useTitulo"
 
 const Alta = () => {
+
+  useTitulo('Alta')
+  
   return (
     <div>Alta</div>
   )
