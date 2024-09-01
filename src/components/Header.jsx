@@ -1,4 +1,5 @@
 import './Header.scss'
+import Navbar from './Navbar'
 
 
 const Header = () => {
@@ -7,22 +8,7 @@ const Header = () => {
     <header className="main-header">
     <input type="checkbox" id="menu" />
 
-    <nav className="nav-bar">
-      <ul className="nav-bar__nav-list">
-        <li className="nav-bar__nav-item">
-          <a href="/index.html" className="nav-bar__nav-link">Inicio</a>
-        </li>
-        <li className="nav-bar__nav-item">
-          <a href="#" className="nav-bar__nav-link">Alta</a>
-        </li>
-        <li className="nav-bar__nav-item">
-          <a href="/views/nosotros.html" className="nav-bar__nav-link">Nosotros</a>
-        </li>
-        <li className="nav-bar__nav-item">
-          <a href="/views/contacto.html" className="nav-bar__nav-link">Contacto</a>
-        </li>
-      </ul>  
-    </nav>
+    <Navbar />
 
     <div className="search-bar">
       <div className="search-bar__logo-container">
