@@ -1,8 +1,13 @@
-import Card from '../components/Card'
-import useTitulo from '../hooks/useTitulo'
+import { useContext } from 'react'
+
 import './Inicio.scss'
+import useTitulo from '../hooks/useTitulo'
+import Card from '../components/Card'
+import ProductosContext from '../context/ProductosContext'
 
 const Inicio = () => {
+
+  const {productos} = useContext(ProductosContext)
 
   useTitulo('Inicio')
 
@@ -15,18 +20,16 @@ const Inicio = () => {
       
       <div className="cards_container" id="contenedor-cards">
 
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {
+          productos && productos.map((producto) => (
+
+            <Card key={producto.id} producto={producto}/>
+
+          ))
+        }
         
       </div>
+
     </section>
   </main>
   )

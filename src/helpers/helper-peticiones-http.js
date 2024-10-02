@@ -6,8 +6,9 @@ export const helperPeticionesHttp = async (url, options) => {
         if (!res.ok) throw new Error ('No se pudo realizar', res.status)
             const data = await res.json()
             return data
+            
     } catch (error) {
-        console.log ('[helperPeticionesHttp]', error)
+        console.error ('[helperPeticionesHttp]', error)
     }
 
 }
