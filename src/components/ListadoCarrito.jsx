@@ -1,4 +1,4 @@
-import './ListadoCarrito.Scss'
+import './ListadoCarrito.scss'
 import { useContext } from "react"
 import CarritoContext from "../context/CarritoContext"
 import ItemCarrito from "./ItemCarrito"
